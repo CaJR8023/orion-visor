@@ -13,7 +13,6 @@
     <packaging>jar</packaging>
 
     <description>后端服务主项目容器 按需引用 orion-visor-module-xxx 依赖</description>
-    <url>https://github.com/lijiahangmax/orion-visor</url>
 
     <dependencies>
         <!-- spring boot 配置所需依赖 -->
@@ -102,7 +101,7 @@
 
     <build>
         <!-- 设置构建的 jar 包名 -->
-        <finalName>${project.artifactId}</finalName>
+        <finalName>devops-service-${revision}-launch</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -139,6 +138,29 @@
                     </delimiters>
                     <useDefaultDelimiters>false</useDefaultDelimiters>
                 </configuration>
+            </plugin>
+            <!--Critical plugin, assembly plugin provided by maven, should be placed last-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>make-zip</id>
+                        <!--Bound maven operation-->
+                        <phase>package</phase>
+                        <!--Run once-->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>../dist</outputDirectory>
+                            <descriptors>
+                                <descriptor>../assembly.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

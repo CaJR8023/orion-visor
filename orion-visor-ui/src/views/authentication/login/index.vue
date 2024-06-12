@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <!-- 顶部 logo -->
-    <div class="logo">
+    <!-- <div class="logo">
       <img class="logo-img"
            alt="logo"
-           src="@/assets/logo.svg?url" />
-      <div class="logo-text">Orion Visor</div>
-    </div>
+           src="@/assets/logo_g.svg?url" />
+      <div class="logo-text"></div>
+    </div> -->
     <!-- 左侧 banner -->
-    <login-banner />
+    <!-- <login-banner /> -->
     <!-- 主体部分 -->
     <div class="content">
       <div class="content-inner">
@@ -16,9 +16,9 @@
         <login-form />
       </div>
       <!-- 页脚 -->
-      <div class="footer">
+      <!-- <div class="footer">
         <app-footer />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@
   import { reLoginTipsKey } from '@/types/symbol';
   import LoginBanner from './components/banner.vue';
   import LoginForm from './components/login-form.vue';
-  import AppFooter from '@/components/app/app-footer/index.vue';
+  // import AppFooter from '@/components/app/app-footer/index.vue';
 
   // 登录提示
   const tips = window.sessionStorage.getItem(reLoginTipsKey);

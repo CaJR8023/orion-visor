@@ -32,13 +32,13 @@ const disabled = (): Partial<VitePWAOptions> => {
 const enabled = (): Partial<VitePWAOptions> => {
   return {
     manifest: {
-      name: 'Orion Visor Community',
-      short_name: 'Orion Visor',
+      name: 'Devops Platform',
+      short_name: 'Devops Platform',
       description: '一款高颜值、现代化的智能运维&轻量堡垒机平台。',
       theme_color: '#212529',
       icons: [{
-        src: 'manifest_logo_267.png',
-        sizes: '267x267',
+        src: 'manifest_logo_180.png',
+        sizes: '180x180',
         type: 'image/png',
       }],
     },

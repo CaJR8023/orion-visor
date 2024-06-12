@@ -1,10 +1,7 @@
 {
-  "name": "orion-visor-ui",
-  "description": "Orion Visor UI",
+  "name": "devops-ui",
+  "description": "Devops UI",
   "version": "2.0.3",
-  "private": true,
-  "author": "Jiahang Li",
-  "license": "Apache 2.0",
   "scripts": {
     "dev": "vite --config ./config/vite.config.dev.ts",
     "dev:host": "vite --config ./config/vite.config.dev.ts --host",

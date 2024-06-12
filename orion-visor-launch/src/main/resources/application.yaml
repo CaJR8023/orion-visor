@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: orion-visor-launch
+    name: devops-platform-service
   profiles:
     active: dev
   main:
@@ -54,7 +54,7 @@ spring:
           config:
             multi-statement-allow: true
   redis:
-    database: 0
+    database: 2
     connect-timeout: 5000
     timeout: 3000
   cache:
@@ -134,7 +134,7 @@ knife4j:
 
 logging:
   file:
-    path: ${user.home}/orion/logs/orion-visor
+    path: ${LOG_FILE_PATH:/opt/developer/app/logs/devops-platform}
     name: ${logging.file.path}/app.log
   logback:
     rollingpolicy:
@@ -194,12 +194,12 @@ orion:
   demo: false
   api:
     # 公共 api 前缀
-    prefix: /orion-visor/api
+    prefix: /devops/api
     # 是否开启跨域
     cors: true
   websocket:
     # 公共 websocket 前缀
-    prefix: /orion-visor/keep-alive
+    prefix: /devops/keep-alive
     # 1MB
     binary-buffer-size: 1048576
     # 1MB
@@ -208,14 +208,11 @@ orion:
     session-idle-timeout: 1800000
   swagger:
     # swagger 配置
-    author: Jiahang Li
-    title: orion-visor 运维平台
+    author: 🙈
+    title: 运维平台接口文档
     description: 一站式运维服务平台
     version: ${orion.version}
-    url: https://github.com/lijiahangmax/orion-visor
-    email: ljh1553488six@139.com
     license: Apache-2.0
-    license-url: https://github.com/lijiahangmax/orion-visor/blob/main/LICENSE
     grouped-api:
       infra:
         group: "infra - 基建模块"
@@ -244,15 +241,15 @@ orion:
       enabled: true
       timestamp-prefix: false
       date-directory: false
-      storage-path: ${user.home}
-      base-path: /orion/orion-visor/storage
+      storage-path: ${STORAGE_PATH:/opt/devops/storage}
+      base-path: /
     # 日志文件存储
     logs:
       enabled: true
       timestamp-prefix: false
       date-directory: false
-      storage-path: ${user.home}
-      base-path: /orion/orion-visor/logs
+      storage-path: ${STORAGE_PATH:/opt/devops/storage}
+      base-path: /logs
   security:
     password-encoder-length: 4
     # 匿名接口
@@ -266,7 +263,7 @@ orion:
       working-mode: ECB
       padding-mode: PKCS5_PADDING
       # 加密密钥
-      secret-key: I66AndrKWrwXjtBL
+      secret-key: RGxPB3xKU9WfpMkh
       use-generator-key: true
       generator-key-length: 128
   async:

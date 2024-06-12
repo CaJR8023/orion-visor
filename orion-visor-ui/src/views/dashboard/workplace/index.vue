@@ -25,9 +25,9 @@
           <quick-operation />
         </a-grid-item>
         <!-- 文档 -->
-        <a-grid-item class="panel" :span="24">
+        <!-- <a-grid-item class="panel" :span="24">
           <docs />
-        </a-grid-item>
+        </a-grid-item> -->
       </a-grid>
     </div>
   </div>

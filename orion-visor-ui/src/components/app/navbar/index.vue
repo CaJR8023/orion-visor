@@ -7,11 +7,11 @@
         <img class="left-side-logo"
              alt="logo"
              draggable="false"
-             src="@/assets/logo.svg?url" />
+             src="@/assets/logo2.svg?url" />
         <!-- 标头 -->
         <a-typography-title :heading="5"
                             :style="{ margin: 0, fontSize: '18px', height: '1.4em', overflow: 'hidden' }">
-          Orion Visor
+          Devops Platform
         </a-typography-title>
         <!-- 收缩菜单 -->
         <icon-menu-fold v-if="!topMenu && appStore.device === 'mobile'"

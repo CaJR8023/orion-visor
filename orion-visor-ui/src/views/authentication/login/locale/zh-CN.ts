@@ -1,5 +1,5 @@
 export default {
-  'login.form.title': '登录 Orion Visor',
+  'login.form.title': '登录运维平台',
   'login.form.sub.title': '一站式服务器运维解决方案',
   'login.form.userName.errMsg': '用户名不能为空',
   'login.form.password.errMsg': '密码不能为空',

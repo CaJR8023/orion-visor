@@ -5,8 +5,8 @@
       <img alt="logo"
            class="terminal-header-logo"
            draggable="false"
-           src="@/assets/logo.svg?url" />
-      <h5 class="terminal-header-logo-text">Orion Visor</h5>
+           src="@/assets/logo2.svg?url" />
+      <h5 class="terminal-header-logo-text">Devops</h5>
     </div>
     <!-- 左侧 tabs -->
     <div class="terminal-header-tabs">
